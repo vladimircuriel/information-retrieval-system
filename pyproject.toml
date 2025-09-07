@@ -1,0 +1,31 @@
+[project]
+name = "information-retrieval-system"
+version = "1.0.0"
+description = "An NLP-based information retrieval system that indexes document collections, understands natural language queries, and returns relevance-ranked results using modern ranking algorithms."
+authors = [
+    {name = "VladimirCuriel",email = "vladimircuriel@outlook.com"}
+]
+readme = "README.md"
+requires-python = "==3.13.7"
+dependencies = [
+    "pandas (==2.3.2)",
+    "nltk (==3.9.1)",
+    "scikit-learn (==1.7.1)",
+]
+
+license = { file = "LICENSE" }
+
+[tool.ruff]
+exclude     = ["tests/data/*", ".venv/"]
+lint.select = ["E", "F", "W", "C90", "I"]
+line-length = 88
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "0.12.12"
+
+[tool.poetry]
+packages = [{ include = "app", from = "src" }]
