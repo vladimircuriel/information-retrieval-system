@@ -1,3 +1,9 @@
+assets/external/
+__pycache__/
+.web
+*.py[cod]
+.states
+*.db
 .vscode/
 .venv/
 .ruff_cache/
